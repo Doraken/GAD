@@ -1,0 +1,2 @@
+# GAD
+Generique Architecture Documentation
