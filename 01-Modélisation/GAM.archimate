@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="GAM" id="b39667f2-8618-446f-b3fc-17bd63b6cefe" version="4.0.0">
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" xmlns:canvas="http://www.archimatetool.com/archimate/canvas" name="Global -- G1R1C1" id="b39667f2-8618-446f-b3fc-17bd63b6cefe" version="4.0.0">
   <metadata/>
   <folder name="Strategy" id="3d609e1b-856e-48ef-b49a-09d5f9cfc582" type="strategy">
     <folder name="dict" id="38ebb18c-ecb0-4674-af16-0817d2d40ba6">
@@ -87,6 +87,7 @@
   </folder>
   <folder name="Business" id="e2a939d1-b501-4c72-ba20-31e14bbeaac2" type="business">
     <element xsi:type="archimate:BusinessActor" name="user" id="4c98963e-37f1-4bb0-926a-b86e72502c95"/>
+    <element xsi:type="archimate:BusinessProcess" name="Bascule manuel " id="3ca21c61-8966-49ed-b0b2-01c4d8e2526a"/>
   </folder>
   <folder name="Application" id="32f285c8-56d0-4ab1-b38e-ea492d73d577" type="application">
     <folder name="module d'application" id="b1be5e5d-ad5f-47a8-8a23-371a89057b11">
@@ -353,6 +354,7 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
     <element xsi:type="archimate:TechnologyFunction" name="Cache de ressource web " id="35705fe5-fbcb-498a-a80f-c395893eabea">
       <documentation>Page , CSS, images, JavaScript, and XML</documentation>
     </element>
+    <element xsi:type="archimate:TechnologyFunction" name="Fail over manuel" id="0843fbea-9622-4a5a-bf5a-1efd647debf4"/>
   </folder>
   <folder name="Motivation" id="99b56252-9115-4be3-903c-06744c1a8684" type="motivation"/>
   <folder name="Implementation &amp; Migration" id="d9e645b1-5d83-4b28-9c8a-2030eea92adc" type="implementation_migration"/>
@@ -543,7 +545,6 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
     <element xsi:type="archimate:RealizationRelationship" id="a9ab56da-e4cf-4d38-a598-7f9ebff7bfb3" source="3fca7526-6e9c-42b8-938a-1200e06084e6" target="c858b189-0779-4b36-8380-618a2f44c165"/>
     <element xsi:type="archimate:RealizationRelationship" id="54e68391-fb4f-4f54-9df1-4ca5a8ea1102" source="2ade02f1-eb78-4589-a45e-59a63798c06a" target="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89"/>
     <element xsi:type="archimate:TriggeringRelationship" id="0b1e28e0-b439-44de-8d6c-45b7d9767fec" source="2116d9d4-3423-4f7f-a34f-98a333bbca01" target="c71fcacb-f73e-491e-9b3a-45658294650c"/>
-    <element xsi:type="archimate:TriggeringRelationship" id="668702f3-928c-43fa-8b6e-eba4e454bb7f" source="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89" target="2b292660-241a-434b-a29e-be65d861291f"/>
     <element xsi:type="archimate:TriggeringRelationship" id="7601f5e0-6bd2-4314-b528-5ac808e941f5" source="2116d9d4-3423-4f7f-a34f-98a333bbca01" target="d7bef010-ba93-4f14-8056-1e3802c06d47"/>
     <element xsi:type="archimate:RealizationRelationship" id="a1b10d03-820d-4dd2-b123-425fe8f9a074" source="9e74c00a-2486-47e6-b6c5-e0aa7467f296" target="aa86949c-bf1e-42be-8355-00eb8d228fa7"/>
     <element xsi:type="archimate:TriggeringRelationship" id="7e7c610c-af5a-4827-949a-fa231d05cd84" source="aa86949c-bf1e-42be-8355-00eb8d228fa7" target="2b292660-241a-434b-a29e-be65d861291f"/>
@@ -555,6 +556,10 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
     <element xsi:type="archimate:CompositionRelationship" id="d3cc30f5-ccd8-46e6-91d7-84d9f3cbdbd3" source="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89" target="23ee6e00-8a42-498d-aa76-d61a15b19480"/>
     <element xsi:type="archimate:CompositionRelationship" id="55ad7d93-78ac-4206-b094-8a8618fc9d98" source="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89" target="a79a8b5a-8d2e-4199-bb1b-bd8bc4cbb48c"/>
     <element xsi:type="archimate:CompositionRelationship" id="a1a16c25-c349-420a-9058-cdf25e21d451" source="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89" target="1fc6e31d-57b6-418e-9e54-335dc231cc55"/>
+    <element xsi:type="archimate:FlowRelationship" id="cb341ccc-bcd9-464d-8ebc-a9bc4bda1978" source="2116d9d4-3423-4f7f-a34f-98a333bbca01" target="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89"/>
+    <element xsi:type="archimate:FlowRelationship" id="bf43f9fd-6c6f-4531-85dd-2e85568610f7" source="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89" target="aa86949c-bf1e-42be-8355-00eb8d228fa7"/>
+    <element xsi:type="archimate:CompositionRelationship" id="d334dbdd-46fc-4d03-8b54-12923a213f05" source="21ae8d2f-b498-4293-8757-726edc157571" target="a79a8b5a-8d2e-4199-bb1b-bd8bc4cbb48c"/>
+    <element xsi:type="archimate:CompositionRelationship" id="8ebdd8f6-8f74-4667-8c53-2ee2c8f7fe0d" source="21ae8d2f-b498-4293-8757-726edc157571" target="1fc6e31d-57b6-418e-9e54-335dc231cc55"/>
   </folder>
   <folder name="Views" id="fa7c206b-03a7-46d2-83d7-03248320b73d" type="diagrams">
     <folder name="Lo - Services" id="1d8793e8-50f0-45ca-9ef9-14a5c1157d8b">
@@ -866,6 +871,443 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
         </child>
       </element>
     </folder>
+    <folder name="ALN" id="d16a77ac-46b8-4c71-a6c1-1f4c21f3ffce">
+      <element xsi:type="canvas:CanvasModel" name="Canva de base pour ALN" id="e65c269b-8805-4511-a2c2-d77603e020bb">
+        <child xsi:type="canvas:CanvasModelBlock" id="d3d400a9-b9f4-47e4-8ed9-bc55384e757b" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" imagePosition="7" borderColor="#000000" hintTitle="Acteurs internes">
+          <bounds x="24" y="24" width="109" height="409"/>
+          <hintContent>Employés, prestataires, fournisseurs, privilégiés...</hintContent>
+          <content>Acteurs Internes</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="f460fb2e-59f2-4a8a-98db-d9af5bb407d0" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Interface">
+          <bounds x="264" y="24" width="108" height="745"/>
+          <hintContent>Interface avec l'application ex Client lourd, app, navigateur, voix etc</hintContent>
+          <content>Interface</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="6d85fa39-8bbd-4463-9ff9-3ac191fd1131" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Usine Logicielle">
+          <bounds x="264" y="780" width="1585" height="77"/>
+          <hintContent>Test, développement, packaging, déploiement...</hintContent>
+          <content>Usine Logicielle</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="b8af95ca-a555-4960-942d-df134fb0029f" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" borderColor="#000000" hintTitle="Contrôle d'accès">
+          <bounds x="384" y="24" width="241" height="553"/>
+          <child xsi:type="canvas:CanvasModelBlock" id="910a3f37-2aea-46f6-a506-8bf59ba0802a" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="72" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Intranet</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="e01e2f73-0c7a-48c6-8f2e-929d255ff52d" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="192" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Site Sûr</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="399729eb-38ca-478f-8643-522190568b73" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="312" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Mobile</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="93bfbea1-e5b3-4e1b-9b19-d3e8b9d892bc" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="432" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Internet</content>
+          </child>
+          <hintContent>Canal et mécanique pour le contrôle d'accès</hintContent>
+          <content>Contrôle d'Accès</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="0e32cf96-2365-4ee8-9e74-42241b28730c" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" borderColor="#000000" hintTitle="Exposition">
+          <bounds x="636" y="24" width="241" height="553"/>
+          <child xsi:type="canvas:CanvasModelBlock" id="6bec362c-7f87-4590-9fef-303df810b052" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="72" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Intranet</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="8f2aa102-8aef-4a57-bf00-693cea06d390" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="192" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Site Sûr</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="321f5566-0f87-4f28-ac0a-a3f96d1a0433" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="312" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Mobile</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="373f3f1d-0eab-4421-a17a-acabfef7d456" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+            <bounds x="24" y="432" width="192" height="109"/>
+            <hintContent>&lt;li>For what value are our customers really willing to pay?&lt;/li>&#xD;
+&lt;li>For what do they currently pay?&lt;/li>&#xD;
+&lt;li>How are they currently paying?&lt;/li>&#xD;
+&lt;li>How would they prefer to pay?&lt;/li>&#xD;
+&lt;li>How much does each Revenue Stream contribute to overall revenues?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Types:&#xD;
+&lt;i>&#xD;
+&lt;li>Asset sale&lt;/li>&#xD;
+&lt;li>Usage fee&lt;/li>&#xD;
+&lt;li>Subscription Fees&lt;/li>&#xD;
+&lt;li>Lending/Renting/Leasing&lt;/li>&#xD;
+&lt;li>Licensing&lt;/li>&#xD;
+&lt;li>Brokerage fees&lt;/li>&#xD;
+&lt;li>Advertising&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Fixed Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>List Price&lt;/li>&#xD;
+&lt;li>Product feature dependent&lt;/li>&#xD;
+&lt;li>Customer segment dependent&lt;/li>&#xD;
+&lt;li>Volume dependent&lt;/li>&#xD;
+&lt;/i>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+Dynamic Pricing:&#xD;
+&lt;i>&#xD;
+&lt;li>Negotiation( bargaining)&lt;/li>&#xD;
+&lt;li>Yield Management&lt;/li>&#xD;
+&lt;li>Real-time-Market&lt;/li>&#xD;
+&lt;/i>&#xD;
+</hintContent>
+            <content>Internet</content>
+          </child>
+          <hintContent>Canal et mécanique d'exposition</hintContent>
+          <content>Exposition</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="0c4e0a2c-0ea5-4e6a-b4e3-22929e077f71" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Traitements">
+          <bounds x="888" y="24" width="229" height="553"/>
+          <hintContent>Coeur de l'application (ex action métier)</hintContent>
+          <content>Traitements</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="70914d71-50a5-4a27-995c-29ddea86f586" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" imagePosition="7" borderColor="#000000" hintTitle="Cost Structure">
+          <bounds x="144" y="24" width="108" height="833"/>
+          <hintContent>Devices et médias : ex : poste fixe, pc portable, mobile tablette</hintContent>
+          <content>Devices</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="3d676995-8c3e-4c83-8241-eca3f70bc90e" name="Block" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Sécurité">
+          <bounds x="384" y="684" width="1464" height="85"/>
+          <hintContent>Solutions transverses de sécurité ex WAF</hintContent>
+          <content>Sécurité</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="432c4545-a0c6-47f9-9a98-7417a71ce84e" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" imagePosition="7" borderColor="#000000" hintTitle="Acteurs externes">
+          <bounds x="24" y="444" width="109" height="413"/>
+          <hintContent>Clients finaux, fournisseurs, collectivités, TMA, entreprises etc..</hintContent>
+          <content>Acteurs Externes</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="7afec6de-8809-4093-abc4-fc88b6657afa" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Echanges Internes SI GRDF">
+          <bounds x="1128" y="24" width="229" height="553"/>
+          <hintContent>Solutions d'échanges internes au SI GRDF : ex CFT, bus etc...</hintContent>
+          <content>Echanges Internes SI GRDF&#xD;
+</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="1a1f6a83-e546-4cf8-bbf8-acd0e33b0d3d" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" borderColor="#000000" hintTitle="Customer Segments">
+          <bounds x="1368" y="24" width="241" height="553"/>
+          <child xsi:type="canvas:CanvasModelBlock" id="8e3dcbf8-24fa-47c5-99d0-2a6ee7fbed36" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Références">
+            <bounds x="24" y="72" width="192" height="109"/>
+            <hintContent>Données de références au sein de GRDF</hintContent>
+            <content>de Références</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="fca06093-c8fd-4d6a-a9fe-bf4e2d853c7b" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Décisionnelles">
+            <bounds x="24" y="192" width="192" height="109"/>
+            <hintContent>Données décisionnelles GRDF</hintContent>
+            <content>Décisionnelles</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="d556eb73-f580-4201-ad49-9c81d37f8a4d" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Opérationnelles">
+            <bounds x="24" y="312" width="192" height="109"/>
+            <hintContent>Données opérationnelles GRDF</hintContent>
+            <content>Opérationnelles</content>
+          </child>
+          <child xsi:type="canvas:CanvasModelBlock" id="85a4ffb9-4975-4354-bc1d-c6a8695ec398" name="Block" font="1|Arial|11.1|3|WINDOWS|1|-37|0|0|0|700|-1|0|0|0|3|2|1|34|Arial" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Objets métier">
+            <bounds x="24" y="432" width="192" height="109"/>
+            <hintContent>Objets métier GRDF</hintContent>
+            <content>Objets Métier</content>
+          </child>
+          <hintContent>&lt;li>For whom are we creating value?&lt;/li>&#xD;
+&lt;li>Who are our most important customers?&lt;/li>&#xD;
+&#xD;
+&lt;p/>&#xD;
+&#xD;
+&lt;i>&#xD;
+&lt;li>Mass Market&lt;/li>&#xD;
+&lt;li>Niche Market&lt;/li>&#xD;
+&lt;li>Segmented&lt;/li>&#xD;
+&lt;li>Diversified&lt;/li>&#xD;
+&lt;li>Multi-sided Platform&lt;/li>&#xD;
+&lt;/i></hintContent>
+          <content>Données</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="250dc31c-438e-4944-bb89-e96d023102ba" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Echanges externes">
+          <bounds x="1620" y="24" width="229" height="553"/>
+          <hintContent>Solutions pour échanger avec les SI Externes : ex : VPN, mail, sms..</hintContent>
+          <content>Echanges Externes</content>
+        </child>
+        <child xsi:type="canvas:CanvasModelBlock" id="9eaaabf6-729e-4806-a418-445db8ddf97f" name="Block" font="1|Arial Black|11.1|0|WINDOWS|1|-37|0|0|0|900|0|0|0|0|3|2|1|34|Arial Black" textAlignment="1" fillColor="#e1e3e2" borderColor="#000000" hintTitle="Revenue Streams">
+          <bounds x="384" y="588" width="1464" height="85"/>
+          <hintContent>Ordonnancement, supervision, gestion des logs etc..</hintContent>
+          <content>Exploitation</content>
+        </child>
+      </element>
+    </folder>
     <folder name="Technique" id="8fa4dd0d-0184-4b8f-a31f-301c6b531e6e">
       <folder name="Generiques" id="a3e713d1-db84-4ab3-b5d1-5009d698a0a2">
         <folder name="Intances" id="eb015bbe-3b23-4c75-b9b5-2bc18b37e80d">
@@ -1156,7 +1598,7 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
     </folder>
     <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="117e904c-9369-48c3-9bee-ee968655dd63">
       <child xsi:type="archimate:DiagramObject" id="681754ca-fdde-4d8b-8c58-3cf198c4a65d" archimateElement="ccd48a95-5584-4d00-a2fc-b394678d8f39" type="1">
-        <bounds x="492" y="204" width="337" height="391"/>
+        <bounds x="480" y="204" width="505" height="391"/>
         <sourceConnection xsi:type="archimate:Connection" id="28e7e88b-e0fe-4624-872d-5be269ea696d" source="681754ca-fdde-4d8b-8c58-3cf198c4a65d" target="2bc057ea-ea79-4bd5-b7df-2f3c7aebf517" archimateRelationship="d921e581-213f-4ec6-ad9e-dc90271674d4"/>
         <sourceConnection xsi:type="archimate:Connection" id="73b522d9-5ba4-4a3a-8eba-7b58df120c55" source="681754ca-fdde-4d8b-8c58-3cf198c4a65d" target="6a970942-7036-4185-b17f-2502addf4586" archimateRelationship="cef3d4dc-fcf5-44c8-a811-d8b6ba6d406c"/>
         <sourceConnection xsi:type="archimate:Connection" id="4e73bb77-6ae9-4b28-8619-84a4d79c715b" source="681754ca-fdde-4d8b-8c58-3cf198c4a65d" target="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" archimateRelationship="86e778b5-b920-44bd-b2c6-ba741420e5f4"/>
@@ -1171,7 +1613,7 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
           <sourceConnection xsi:type="archimate:Connection" id="feb62f63-42c0-420b-bf3f-935ac2af1759" source="3580c935-5268-4363-81a2-ffda5684696a" target="4b82f07e-3533-490d-9fdf-2c22475650ba" archimateRelationship="54e68391-fb4f-4f54-9df1-4ca5a8ea1102"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="b6db0976-0c2f-4669-9a18-aaa2768bdbf3" fontColor="#c0c0c0" archimateElement="3fca7526-6e9c-42b8-938a-1200e06084e6">
-          <bounds x="180" y="204" width="120" height="55"/>
+          <bounds x="348" y="156" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="ae290a4a-7c75-488a-8e52-e5f2874d6cf3" source="b6db0976-0c2f-4669-9a18-aaa2768bdbf3" target="2bc057ea-ea79-4bd5-b7df-2f3c7aebf517" archimateRelationship="a9ab56da-e4cf-4d38-a598-7f9ebff7bfb3"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="6a970942-7036-4185-b17f-2502addf4586" targetConnections="73b522d9-5ba4-4a3a-8eba-7b58df120c55" archimateElement="9e74c00a-2486-47e6-b6c5-e0aa7467f296">
@@ -1185,44 +1627,28 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
           <sourceConnection xsi:type="archimate:Connection" id="4ad25da8-e0f7-4310-a9d3-5067fdf9f38b" source="784a8add-c850-404d-8ed9-fe5074fc1036" target="d3058179-e950-4fa2-9f7f-e63da32df9a1" archimateRelationship="cff52de5-e67a-4061-9644-a1773c49162a"/>
           <sourceConnection xsi:type="archimate:Connection" id="b108cd9b-c203-4d91-bedd-1804072287aa" source="784a8add-c850-404d-8ed9-fe5074fc1036" target="e79d059b-e8a4-4ba9-942b-b68b5cc19ad1" archimateRelationship="9100b306-4e7e-43e2-abea-00b57a30ee54"/>
           <sourceConnection xsi:type="archimate:Connection" id="13878ea0-aae6-40f9-afb7-3df560154441" source="784a8add-c850-404d-8ed9-fe5074fc1036" target="c6796186-089e-4b97-b02f-9a36f3b3859f" archimateRelationship="7601f5e0-6bd2-4314-b528-5ac808e941f5"/>
+          <sourceConnection xsi:type="archimate:Connection" id="5f97068d-46a1-4fd0-90d9-414e1b40bd39" source="784a8add-c850-404d-8ed9-fe5074fc1036" target="4b82f07e-3533-490d-9fdf-2c22475650ba" archimateRelationship="cb341ccc-bcd9-464d-8ebc-a9bc4bda1978"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" targetConnections="bee06a1a-4298-4639-9810-c1ce8f06b60b 4e73bb77-6ae9-4b28-8619-84a4d79c715b" archimateElement="aa86949c-bf1e-42be-8355-00eb8d228fa7">
+        <child xsi:type="archimate:DiagramObject" id="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" targetConnections="bee06a1a-4298-4639-9810-c1ce8f06b60b 4e73bb77-6ae9-4b28-8619-84a4d79c715b 6a39835d-d1b0-43af-9e21-d6cb58f8f486" archimateElement="aa86949c-bf1e-42be-8355-00eb8d228fa7">
           <bounds x="24" y="276" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="01bd83ac-286a-49c2-85d6-35296e8c8c2a" source="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" target="83186396-e843-43a3-804f-dd050962aab4" archimateRelationship="198f6ed9-bdbb-4491-ada2-ab0bdc5e339e"/>
           <sourceConnection xsi:type="archimate:Connection" id="90da73e2-830f-4f1f-85e7-e197a29d382a" source="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" target="1ea91f69-7e9a-4427-9520-f13f543700a7" archimateRelationship="72f7ed31-f9cd-470e-94c0-56687d601f07"/>
           <sourceConnection xsi:type="archimate:Connection" id="50e455a2-e41a-4f89-a083-995f42b7a302" source="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" target="ba09b4b8-0e23-498f-9155-a25ff90d0c0a" archimateRelationship="7e7c610c-af5a-4827-949a-fa231d05cd84"/>
         </child>
         <child xsi:type="archimate:DiagramObject" id="2bc057ea-ea79-4bd5-b7df-2f3c7aebf517" targetConnections="28e7e88b-e0fe-4624-872d-5be269ea696d ae290a4a-7c75-488a-8e52-e5f2874d6cf3" fontColor="#c0c0c0" archimateElement="c858b189-0779-4b36-8380-618a2f44c165">
-          <bounds x="24" y="204" width="120" height="55"/>
+          <bounds x="324" y="60" width="120" height="55"/>
         </child>
-        <child xsi:type="archimate:DiagramObject" id="4b82f07e-3533-490d-9fdf-2c22475650ba" targetConnections="feb62f63-42c0-420b-bf3f-935ac2af1759 6279362b-61c0-445c-9d74-56e64c55c28f" archimateElement="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89">
-          <bounds x="24" y="132" width="120" height="55"/>
-          <sourceConnection xsi:type="archimate:Connection" id="6059771f-2dc5-4ac0-aa7a-2fbb04b41122" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="ba09b4b8-0e23-498f-9155-a25ff90d0c0a" archimateRelationship="668702f3-928c-43fa-8b6e-eba4e454bb7f"/>
-        </child>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="cb3ed059-da9f-4ddf-8630-3b35bbb6056d" archimateElement="7d0d24be-f5a0-496b-86f8-32ff95d988b7">
-        <bounds x="60" y="168" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="5056c0c0-cac7-41e1-a79c-64be30a0b65d" archimateElement="a83a142e-0cda-4112-915b-e8c9f8ffd854">
-        <bounds x="60" y="234" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="09c95ae2-aff5-4ce7-be6a-816c504908f8" archimateElement="bc188b4d-41eb-47ac-8f68-7c7f3fae211d">
-        <bounds x="60" y="300" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="677aea1e-5057-4948-88d7-09181629a8d5" archimateElement="21ae8d2f-b498-4293-8757-726edc157571">
-        <bounds x="60" y="360" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="e1a637ce-a37f-4422-8b82-b8fee40427b4" archimateElement="6ac96d52-c9e5-4448-a607-f4386fea5029">
-        <bounds x="60" y="420" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="e2cf0592-1e5e-46d5-8190-81d6a67dc7ed" archimateElement="23ee6e00-8a42-498d-aa76-d61a15b19480">
-        <bounds x="60" y="480" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="bd66d480-1afd-4d90-b0a9-6531c84b8d24" archimateElement="a79a8b5a-8d2e-4199-bb1b-bd8bc4cbb48c">
-        <bounds x="60" y="540" width="120" height="55"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="1d30d2e4-b275-4482-90be-8fb109202373" archimateElement="1fc6e31d-57b6-418e-9e54-335dc231cc55">
-        <bounds x="60" y="600" width="120" height="55"/>
+        <bounds x="1068" y="624" width="145" height="187"/>
+        <sourceConnection xsi:type="archimate:Connection" id="100d6232-9a78-49e5-aec3-bfcbe02fc032" source="677aea1e-5057-4948-88d7-09181629a8d5" target="bd66d480-1afd-4d90-b0a9-6531c84b8d24" archimateRelationship="d334dbdd-46fc-4d03-8b54-12923a213f05"/>
+        <sourceConnection xsi:type="archimate:Connection" id="a914b59c-22ed-4fbb-b480-58375f50bd70" source="677aea1e-5057-4948-88d7-09181629a8d5" target="1d30d2e4-b275-4482-90be-8fb109202373" archimateRelationship="8ebdd8f6-8f74-4667-8c53-2ee2c8f7fe0d"/>
+        <child xsi:type="archimate:DiagramObject" id="bd66d480-1afd-4d90-b0a9-6531c84b8d24" targetConnections="100d6232-9a78-49e5-aec3-bfcbe02fc032" archimateElement="a79a8b5a-8d2e-4199-bb1b-bd8bc4cbb48c">
+          <bounds x="12" y="36" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="1d30d2e4-b275-4482-90be-8fb109202373" targetConnections="a914b59c-22ed-4fbb-b480-58375f50bd70" archimateElement="1fc6e31d-57b6-418e-9e54-335dc231cc55">
+          <bounds x="12" y="108" width="120" height="55"/>
+        </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="e79d059b-e8a4-4ba9-942b-b68b5cc19ad1" targetConnections="b108cd9b-c203-4d91-bedd-1804072287aa" archimateElement="962b9b50-600f-44a6-9ec2-37be5633991a">
         <bounds x="480" y="72" width="120" height="55"/>
@@ -1242,11 +1668,38 @@ La répartition de charge est issue de la recherche dans le domaine des ordinate
       <child xsi:type="archimate:DiagramObject" id="83186396-e843-43a3-804f-dd050962aab4" targetConnections="01bd83ac-286a-49c2-85d6-35296e8c8c2a" archimateElement="cd57c033-1e7a-460d-861e-57662766c4b7">
         <bounds x="373" y="684" width="120" height="55"/>
       </child>
-      <child xsi:type="archimate:DiagramObject" id="ba09b4b8-0e23-498f-9155-a25ff90d0c0a" targetConnections="6059771f-2dc5-4ac0-aa7a-2fbb04b41122 50e455a2-e41a-4f89-a083-995f42b7a302" archimateElement="2b292660-241a-434b-a29e-be65d861291f">
+      <child xsi:type="archimate:DiagramObject" id="ba09b4b8-0e23-498f-9155-a25ff90d0c0a" targetConnections="50e455a2-e41a-4f89-a083-995f42b7a302" archimateElement="2b292660-241a-434b-a29e-be65d861291f">
         <bounds x="217" y="684" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="1ea91f69-7e9a-4427-9520-f13f543700a7" targetConnections="90da73e2-830f-4f1f-85e7-e197a29d382a" archimateElement="35705fe5-fbcb-498a-a80f-c395893eabea">
         <bounds x="516" y="684" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="4b82f07e-3533-490d-9fdf-2c22475650ba" targetConnections="feb62f63-42c0-420b-bf3f-935ac2af1759 6279362b-61c0-445c-9d74-56e64c55c28f 5f97068d-46a1-4fd0-90d9-414e1b40bd39" archimateElement="c7e9ce3e-7a2a-4a1e-9384-b245b0604e89">
+        <bounds x="204" y="144" width="145" height="349"/>
+        <sourceConnection xsi:type="archimate:Connection" id="6a39835d-d1b0-43af-9e21-d6cb58f8f486" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="0fb1dc9a-da12-4fd0-83c2-9993b7befabd" archimateRelationship="bf43f9fd-6c6f-4531-85dd-2e85568610f7"/>
+        <sourceConnection xsi:type="archimate:Connection" id="7514dfa8-368a-427e-90af-527a878e0f08" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="e2cf0592-1e5e-46d5-8190-81d6a67dc7ed" archimateRelationship="d3cc30f5-ccd8-46e6-91d7-84d9f3cbdbd3"/>
+        <sourceConnection xsi:type="archimate:Connection" id="5fdf1f63-e64e-4043-b1cf-e2ef0b5ca751" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="5056c0c0-cac7-41e1-a79c-64be30a0b65d" archimateRelationship="70b8ac6b-c980-4c87-99e7-672b545bbc06"/>
+        <sourceConnection xsi:type="archimate:Connection" id="12f7ccd9-ff00-4143-a07c-0b8af217bdb5" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="e1a637ce-a37f-4422-8b82-b8fee40427b4" archimateRelationship="5ce3d3bf-6e6d-4423-9c59-efd169c4d74b"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c66a703b-76e1-4246-8a2e-0abe098be089" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="09c95ae2-aff5-4ce7-be6a-816c504908f8" archimateRelationship="226e3d2b-abfd-489c-a6f2-f5a3f385c719"/>
+        <sourceConnection xsi:type="archimate:Connection" id="f747c4cd-47fc-4afa-a901-5563e8fb8dd5" source="4b82f07e-3533-490d-9fdf-2c22475650ba" target="cb3ed059-da9f-4ddf-8630-3b35bbb6056d" archimateRelationship="8b1ae798-430a-402b-bf78-fea07a718f43"/>
+        <child xsi:type="archimate:DiagramObject" id="e2cf0592-1e5e-46d5-8190-81d6a67dc7ed" targetConnections="7514dfa8-368a-427e-90af-527a878e0f08" archimateElement="23ee6e00-8a42-498d-aa76-d61a15b19480">
+          <bounds x="12" y="228" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="5056c0c0-cac7-41e1-a79c-64be30a0b65d" targetConnections="5fdf1f63-e64e-4043-b1cf-e2ef0b5ca751" archimateElement="a83a142e-0cda-4112-915b-e8c9f8ffd854">
+          <bounds x="13" y="108" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="e1a637ce-a37f-4422-8b82-b8fee40427b4" targetConnections="12f7ccd9-ff00-4143-a07c-0b8af217bdb5" archimateElement="6ac96d52-c9e5-4448-a607-f4386fea5029">
+          <bounds x="12" y="288" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="09c95ae2-aff5-4ce7-be6a-816c504908f8" targetConnections="c66a703b-76e1-4246-8a2e-0abe098be089" archimateElement="bc188b4d-41eb-47ac-8f68-7c7f3fae211d">
+          <bounds x="13" y="168" width="120" height="55"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="cb3ed059-da9f-4ddf-8630-3b35bbb6056d" targetConnections="f747c4cd-47fc-4afa-a901-5563e8fb8dd5" archimateElement="7d0d24be-f5a0-496b-86f8-32ff95d988b7">
+          <bounds x="12" y="48" width="120" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="8590abd5-55ab-41a6-90b8-253419bae218" archimateElement="3ca21c61-8966-49ed-b0b2-01c4d8e2526a">
+        <bounds x="1068" y="540" width="120" height="55"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" name="Paterne serveur d'application" id="9d60c407-372a-4952-9555-1c6e9fffa8e7">
