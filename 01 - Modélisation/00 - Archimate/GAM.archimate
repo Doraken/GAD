@@ -1827,7 +1827,7 @@ Dynamic Pricing:&#xD;
         </child>
       </child>
       <child xsi:type="archimate:DiagramObject" id="ff65c3ee-03c3-4f50-9454-e1117d36be84" archimateElement="8f844149-433d-4e69-81ec-70ae536290cd">
-        <bounds x="1157" y="510" width="120" height="55"/>
+        <bounds x="-65" y="528" width="120" height="55"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" name="Generated View for Moteur applicatif générique (copy)" id="c08b78ad-ef6c-4398-b728-68a2db591c8a"/>
